@@ -971,3 +971,232 @@ All implementations of the Singleton have these two steps in common:
 ## Example Synchronous vs Asynchronous programming
 
 ![alt text](image-35.png)
+
+# Software Architecture
+
+## What is Software Architecture?
+- Software architecture defines the fundamental structure of a software system
+- Influences how effectively the software can adapt to changes, scale, perform and maintain
+its realibility
+
+## Four Dimensions of Software Architecture
+1. Architectural Characteristics
+2. Architecturial Decisions
+3. Logical Components
+4. Architecturial Style
+
+## Dimension 1: Architectural Characteristics
+- Architectural Characterstics define fundamental qualities software architecture must support
+
+- Commonly used Architectural Characteristics
+    - Scalability (support growth)
+    - Reliability (consistent operation)
+    - Availability (system uptime)
+    - Testability (ease of testing components)
+
+
+## Dimension 2: Architectural Decisions
+- Long-term structural decisions influencing software behaviour.
+- Architectural Decisions set constraints guiding future development
+
+## Dimension 3: Logical Components
+- Functional building blocks representing business features
+
+## Dimension 4: Architectural Styles
+- Overall system shape and structural patterns
+- Common styles:
+    - Layered (clear seperation of concerns)
+    - Microservices (highly scalable and agile)
+    - Event-driven (responsive and scalable)
+
+## Architecture vs. Design
+- Architecture: Structural decisions (hard to change)
+- Design: Appearance and detailed decisions
+
+- Decisions exist on a spectrum from pure architecture to pure design
+- Strategic decisions: Long-term, high impact, high effort
+- Tatical decisions (design): Short term, low impact, low effort
+
+## Identifying Architectural Decisions
+- Questions to consider:
+    - Is it strategic (long-term) or tactical (short-term)
+    - Effort to change: high or low?
+    - Does it involve significant trade offs?
+
+
+# Architectural Characteristics
+
+## What are Arcitectural Characterstics
+- Architectural Characteristics define fundamentall qualities fowtare architecture must support
+- They are often not explicitly defined
+- They influence structure, infrastructure and quality of the system
+- Architectural characteristics guide decisions like architectural style, deployment and scalability.
+
+## Some of the Popular Architectural Charactersitics
+- Scalability
+- Availability
+- Maintainability
+- Security
+- Elasticity
+- Deployability
+- Responsiveness
+
+## Architectural Characteristics vs. Logival Components
+- Architectrual Characteristics: How the system performs under various constraints
+- Logical Components: What the software does (domain behaviour)
+
+![alt text](image-42.png)
+
+## Implicit vs Explicit Characteristics
+
+- **Explicit**: Stated clearly in the requirements document
+    - "The system must support French and Japanese" - internationalisation
+    - "Allow only registered users to access admin panel" - Authorization
+- **Implicit**: Not stated, but understood or expected (requires domain/context understanding)
+    - Users expect their data to be secure even if not mentioned - Security
+
+
+## Types of Characteristics
+- **Process** Characteristics: Deployability, Maintainability
+- **Structural** Characteristics: Modularity, Coupling
+- **Operational** Characteristics: Scalability, Availability
+- **Cross-cutting** Characteristics: Accessibility, Security
+
+## Process Characteristics
+- Represent the intersection between architecture and the software development process
+- Reflect how the system is built, tested, deployed and evolved
+- Guide decisions related to engineering practices, automation and team workflows
+
+## Structural Characteristics
+- Concerned with internal structure and composition of the system
+- Influence how components are coupled, interact and evolve independently
+- Impact design qualities like modularity, cohesion and adaptability
+
+## Operational Characteristics
+- Represent how architectural decisions shape and support runtime behaviour
+- Define what the operations team can monitor, control or adapt while the system is running
+- Directly influence system reliiability, performance and fault tolerance
+
+## Cross-Cutting Characteristics
+- Span multiple parts of the system and affect other characteristics
+- Often enforced through design, tooling and governance
+
+## Composite Characteristics
+- Formed from mulitple simpler tratis
+- These high level characeristics reflect complex system qualities that require multiple
+dimensions to evaluate.
+
+## Source of Characteristics
+- Problem Domain (FEature-Driven): Driven by product goals, system failures and expected
+usage patterns
+- Envirionmental Awareness: Driven by company's culture, budget and capabilities
+- Holistic Domain Knowledge: Driven byregulatory standards, industry best practices and user
+trust factors
+
+# Architectural Decision Records
+
+## ADR Structure Review
+Main Sections:
+- TItle: Numbered and Concise
+- Status: Proposed, Accepted, Superseded, or Request Comments
+- Context: Forces and constraints
+- Decision: What was chosen and why
+- Consequences: Trade-offs and impacts
+- Compliance: Governance and enforcement
+- Notes: Metadat (author, date, approval)
+
+## ADR Section - Title
+- Purpose: IDentify and summarise the decision
+- Best Practices:
+    - Number sequentially
+    - Short, descriptive and unambigious
+
+## ADR Section - Status
+- Types:
+    - Proposed: Pending approval
+    - Accepted: Approved and active
+    - Superseded: Replaced by another ADR
+    - RFC: Open for feedback until a deadline
+
+## ADR Section - Context
+- Purpose: Explaine what situation led to this decision
+- Include:
+    - Problem or force requiring a decision
+    - Alternatives under consideration
+
+## ADR Section - Decision
+- Purpose: Describe what was chosen
+- Best Practices:
+    - Use clear, assertive language
+    - Justify with rationale
+
+## ADR Seciton - Consequences
+- Purpose: Describe outcomes and trade-offs
+- Include:
+    - Positive and negative impacts
+    - Known limitations
+
+## ADR Section - Compliance
+Purpose: Define how decision enforcement is measured
+Types:
+    - Manual review
+    - Automated tests
+
+## ADR Section - Notes
+- Purpose: Capture metadata
+- Typical Fields:
+    - Author, approval date, approver
+    - Last modified, superseded reference
+
+## Benefits of Using ADRs
+- Serves as a memory log for decisions
+- Helps new team members understand context
+- Improves consistency and governance
+- Supports continuous evolution and learning
+
+# Behavioural Modelling
+
+## What is Behavioural Modelling
+- Behavioural modelling captures how the system behaves in response to events or interactions 
+over time
+- Software Design and Architecture do not tell us how components behave or interact
+over time
+- Dffierent notations for expressing behaviour
+    - Sequence diagrams
+    - Activity diagrams 
+    - State diagrams
+
+## Sequence Diagrams
+- A sequence diagram is an interaction diagram showing how objects interact in a 
+time-sequenced manner
+- Clarify interactions among objects and improve system behaviour understanding
+- Show how operations are carried out through message exchangers
+- Emphasise the temporal order of interactions
+
+## Key Components of a Sequence Diagram
+
+![alt text](image-42.png)
+
+## Types of Messages
+- Synchronous: Sender waits for a response
+- Asynchronous: Sender does not wait for an immediate response
+
+![alt text](image-43.png)
+
+## Sequence Diagram Overview
+
+![alt text](image-44.png)
+
+## Optional Interaction
+
+![alt text](image-45.png)
+
+## Conditional Interaction
+
+## Looping Interaction
+
+![alt text](image-46.png)
+
+## Parallel Processes
+
+![alt text](image-47.png)
